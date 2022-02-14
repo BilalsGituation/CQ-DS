@@ -88,6 +88,57 @@ print(list2)            # now you have created a new list by slicing and printed
 '''
 
 #User-defined slice
+
+def get_int(FuncList, prompt1, prompt2):
+    TimesAnswered = 0
+    print("len of list is " + str(len(FuncList)))
+    slice1 = int(input(prompt1))
+    slice2 = int(input(prompt2))
+
+    while True:
+        try:
+            print("Slicing between value " + str((int(slice1) + 1)) + " and " + str(int(slice2) + 1))
+            # Reject invalid inputs
+        except ValueError:
+            print("Try again, pal. Whole numbers only. \n")
+            continue
+
+        if  int(slice1) <= len(FuncList) and int(slice2) <= len(FuncList):
+            print(str(FuncList[slice1:slice2]))
+            break
+
+        elif slice1 >= len(FuncList) or slice2 >= len(FuncList):
+            print("Sorry, you've selected a number larger than the list")
+            slice1 = int(input("Please give the first number again: "))
+            slice2 = int(input("Please give the second: "))
+            if slice1 >= len(FuncList) or slice2 >= len(FuncList):
+                print("I was only patient enough to take invalid numbers one time")
+                break
+
+        else:
+            break
+
+''''
 print("Ok, let's do a slice of the most recently printed list.")
-print("Please give me two numbers in ascending order. Lowest must be zero.")
-print(list2[int(input("1st one? ")):int(input("2nd one? "))])
+print("Please give me two numbers in ascending order. Lowest should be at least zero.")
+slice1 = int(input("1st one? "))
+slice2 = int(input("2nd one? "))
+print(list2[slice1:slice2])
+
+print("Ok, let's do a slice of the other extended list we printed.")
+print("Again, please give me two numbers in ascending order. Lowest should be at least zero.")
+slice3 = int(input("1st one? "))
+slice4 = int(input("2nd one? "))
+print(list1[slice3:slice4])
+'''
+
+print("Ok, let's do a slice of the other extended list we printed.")
+print("Please give me two numbers in ascending order. Lowest should be zero or higher.")
+get_int(list(list2), "1st one? ", "2nd one? ")
+
+
+
+print("Cool, let's take one out of the other new list. You choose.")
+print("len of list is " + str(len(list1)))
+list1.remove(int(input("Which shall we remove? Remember that list numbers are funny in Python!")))
+print(str(list1))
