@@ -47,4 +47,47 @@ print("Ok, list 4...")
 list4=list(range(int(input("Lower bound of this range?: ")),int(input("Upper Bound of this range?: ")), int(input("And increment?: ")) ))
 print(list4)
 
-print("\nNice! All done!")
+print("Ok, list 5...")
+list5=list(range(int(input("Lower bound of this range?: ")),int(input("Upper Bound of this range?: ")), int(input("And increment?: ")) ))
+print(list5)
+
+print("Ok, list 6...")
+list6=list(range(int(input("Lower bound of this range?: ")),int(input("Upper Bound of this range?: ")), int(input("And increment?: ")) ))
+print(list6)
+
+#User is demonstrated what the append and extend methods do
+print("We will now 'mix' this up a bit:")
+print("List concatenations using .append")
+print("List 1:List 3")
+list1.append(list3)
+print(str(list1))
+print("List 2:List 4")
+list2.append(list4)
+print(str(list2))
+
+print("Now we're going to experiment with .extend:")
+print("Extension: 1(5)")
+list1.extend(list5)
+print(str(list1))
+print("Extension: 2(6)")
+list2.extend(list6)
+print(str(list2))
+
+print("As you can see from our results, appendages add the entire list as an entry")
+print("While extending a list adds the entries of the extended list")
+print("as entries in the new list.")
+print("NOTE: Our data remain unchanged as the script runs")
+#print("\nNice! All done!")
+
+'''
+"Slicing" is the practice of getting specific entries of a list
+and is demonstrated by
+e.g.
+list2=list(list1[0:8])
+print(list2)            # now you have created a new list by slicing and printed it!
+'''
+
+#User-defined slice
+print("Ok, let's do a slice of the most recently printed list.")
+print("Please give me two numbers in ascending order. Lowest must be zero.")
+print(list2[int(input("1st one? ")):int(input("2nd one? "))])
