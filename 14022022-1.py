@@ -25,6 +25,8 @@ def rando(size=random.randint(2, 10), chars=string.ascii_lowercase + string.digi
 '''
 # print(rando())
 
+'''Get some lists from the user by combining the input and range function'''
+
 print("We are going to generate 4 lists of random numbers. Would you choose some boundaries for me?")
 
 #get user input
