@@ -84,7 +84,7 @@ print("NOTE: Our data remain unchanged as the script runs")
 and is demonstrated by
 e.g.
 list2=list(list1[0:8])
-print(list2)            # now you have created a new list by slicing and printed it!
+print(str(list2))            # now you have created a new list by slicing and printed it!
 '''
 
 #User-defined slice
@@ -124,13 +124,13 @@ print("Ok, let's do a slice of the most recently printed list.")
 print("Please give me two numbers in ascending order. Lowest should be at least zero.")
 slice1 = int(input("1st one? "))
 slice2 = int(input("2nd one? "))
-print(list2[slice1:slice2])
+print(str(list2[slice1:slice2]))
 
 print("Ok, let's do a slice of the other extended list we printed.")
 print("Again, please give me two numbers in ascending order. Lowest should be at least zero.")
 slice3 = int(input("1st one? "))
 slice4 = int(input("2nd one? "))
-print(list1[slice3:slice4])
+print(str(list1[slice3:slice4]))
 '''
 
 # Function is introduced to user, then called
