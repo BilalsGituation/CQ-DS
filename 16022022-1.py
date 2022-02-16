@@ -44,7 +44,7 @@ ask_options("Would you like to (1) add or (2) delete entries\n or (3) change any
 if ask_options.Mods == 1:
     Adds = input("Which property would you like to add an entry for?\n")
     databook[Person][Adds] = input("And what would you like the entry to say?\n")
-    print("Current state of data structure:\n" + str(databook))
+    print("End state of data structure:\n" + str(databook))
 
 # User wanted to delete entry =>
 elif ask_options.Mods == 2:
@@ -52,7 +52,7 @@ elif ask_options.Mods == 2:
         try:
             Deletes = input("Which entry would you like to delete?\n")
             databook[Person].pop(Deletes)
-            print("Current state of data structure:\n" + str(databook))
+            print("End state of data structure:\n" + str(databook))
             break
         except KeyError:
             print("Please enter something included in the dictionary or\ninterrupt the Program however your system does that.")
@@ -64,7 +64,7 @@ elif ask_options.Mods == 3:
     while True:
         if Changes in databook[Person]:
             databook[Person][Changes] = input("What would you like to change that entry to?\n")
-            print("Current state of data structure:\n" + str(databook))
+            print("End state of data structure:\n" + str(databook))
             break
         elif Changes not in databook[Person]:
             print("Please enter something included in the dictionary or\ninterrupt the Program however your system does that.\n")
