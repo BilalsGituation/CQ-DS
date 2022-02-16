@@ -59,7 +59,7 @@ mySet4 = set(range(int(input("And the fourth one?\n"))))
 print(mySet4)
 
 set_entry1 = mySet1.add(int(input("Try adding a duplicate to the first set you produced: ")))
-print(mySet1)
+print(mySet1) # Sets do not take duplicates unless they are converted to list
 set_entry2 = mySet2.add(int(input("Lool, does't work, does it?\nTry adding one to the second set though: ")))
 print(mySet2)
 print("Lmaaaooooo, still doesn't work!")
