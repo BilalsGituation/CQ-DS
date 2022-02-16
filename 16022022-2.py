@@ -10,7 +10,7 @@ A tuple is:
 
 You can create one with round brackets
 '''
-
+'''
 myTuple1 = tuple(range(int(input("How long do you want the first tuple to be?\n"))))
 print(myTuple1)
 myTuple2 = tuple(range(int(input("How long do you want the second tuple to be?\n"))))
@@ -28,7 +28,7 @@ entry3 = myTuple3[int(input("Please choose an entry from your first tuple to dis
 print(entry3)
 entry4 = myTuple4[int(input("Please choose an entry from your first tuple to display: ")) - 1]
 print(entry4)
-
+'''
 
 '''
 In contrast, sets are unordered, unchangeable (entry can't be switched out)
@@ -46,7 +46,8 @@ mySet1 = {1,2,3,3,2,4,4,5}
 mySet2 = list(set(mySet1))
 print(mySet2) # This demonstrated that set printouts do not contain duplicates
 mySet3 = {2, 8, 5392487208423984823, 5392487208423984823, 6, 4, 6, 2}
-print(mySet3) # This demonstrated that set must be converted to list or will be reordered
+print(mySet3) # This demonstrated that set of 4 or under (as we discovered in class)
+must be converted to list or will be reordered
 '''
 
 mySet1 = set(range(int(input("How long do you want the first set to be?\n"))))
@@ -63,3 +64,10 @@ print(mySet1) # Sets do not take duplicates unless they are converted to list
 set_entry2 = mySet2.add(int(input("Lool, does't work, does it?\nTry adding one to the second set though: ")))
 print(mySet2)
 print("Lmaaaooooo, still doesn't work!")
+
+print(mySet1) # original set fed to pop commands
+mySet1.pop()
+print(mySet1) # Pop removes the first entry in the 0th placeholder
+mySet1.add(0)
+print(mySet1) # And if you add it again, your set will be converted
+              # to a list and your addition appears at the end
