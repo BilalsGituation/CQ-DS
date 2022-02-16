@@ -7,6 +7,8 @@ A tuple is:
 -ordered (can't change order)
 -unchangeable (can't change the entries inside the structure)
 -indexed
+
+You can create one with round brackets
 '''
 
 myTuple1 = tuple(range(int(input("How long do you want the first tuple to be?\n"))))
@@ -26,3 +28,21 @@ entry3 = myTuple3[int(input("Please choose an entry from your first tuple to dis
 print(entry3)
 entry4 = myTuple4[int(input("Please choose an entry from your first tuple to display: ")) - 1]
 print(entry4)
+
+
+'''
+In contrast, sets are unordered, unchangeable and can't be indexed.
+Like dictionaries, you create them using CURLY brackets although the difference
+is that you cannot create an empty set, like you can an empty dictionary.
+If you try:
+EmptySet = {}
+print(type(EmptySet))
+
+you will get "<class 'dict'>"
+'''
+
+mySet1 = {1,2,3,3,2,4,4,5}
+mySet2 = list(set(mySet1))
+print(mySet2) # This demonstrated that set printouts do not contain duplicates
+mySet3 = {2, 8, 5392487208423984823, 5392487208423984823, 6, 4, 6, 2}
+print(mySet3) # This demonstrated that set must be converted to list or will be reordered
