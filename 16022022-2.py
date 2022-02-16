@@ -10,7 +10,7 @@ A tuple is:
 
 You can create one with round brackets
 '''
-'''
+
 myTuple1 = tuple(range(int(input("How long do you want the first tuple to be?\n"))))
 print(myTuple1)
 myTuple2 = tuple(range(int(input("How long do you want the second tuple to be?\n"))))
@@ -28,10 +28,11 @@ entry3 = myTuple3[int(input("Please choose an entry from your first tuple to dis
 print(entry3)
 entry4 = myTuple4[int(input("Please choose an entry from your first tuple to display: ")) - 1]
 print(entry4)
-'''
+
 
 '''
-In contrast, sets are unordered, unchangeable and can't be indexed.
+In contrast, sets are unordered, unchangeable (entry can't be switched out)
+and sets also can't be indexed.
 Like dictionaries, you create them using CURLY brackets although the difference
 is that you cannot create an empty set, like you can an empty dictionary.
 If you try:
