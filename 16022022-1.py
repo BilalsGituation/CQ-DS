@@ -60,15 +60,18 @@ elif ask_options.Mods == 2:
 
         # User wanted to alter entry =>
 elif ask_options.Mods == 3:
+    Changes = input("Which entry would you like changed?\n") # Fixed - doesn't accept new entries and loops back if input not accepted
     while True:
-        try:
-            Changes = input("Which entry would you like changed?\n") # NOT YET FIXED - You can add a new entry using this
+        if Changes in databook[Person]:
             databook[Person][Changes] = input("What would you like to change that entry to?\n")
             print("Current state of data structure:\n" + str(databook))
             break
-        except KeyError:
+        elif Changes not in databook[Person]:
             print("Please enter something included in the dictionary or\ninterrupt the Program however your system does that.\n")
+            Changes = input("Which entry would you like changed?\n")
             continue
+        else:
+            break
 
         # User wanted to end Program
 else:
